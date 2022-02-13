@@ -1,7 +1,7 @@
 const api = "https://api.coindesk.com/v1/bpi/currentprice.json";
 
 const price = document.querySelector(".price");
-let selectedCur = document.querySelector("input[type=radio][name=currency]:checked").value;
+
 
 const usdBtn = document.getElementById("usd");
 const gbpBtn = document.getElementById("gbp");
@@ -28,6 +28,7 @@ setInterval(() => {
     .then(data => {
 
       // Set default currency as USD
+      let selectedCur = document.querySelector("input[type=radio][name=currency]:checked").value;
       setPrice(data, selectedCur);
 
       // when usd is selected, convert price to USD
