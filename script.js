@@ -2,7 +2,6 @@ const api = "https://api.coindesk.com/v1/bpi/currentprice.json";
 
 const price = document.querySelector(".price");
 
-
 const usdBtn = document.getElementById("usd");
 const gbpBtn = document.getElementById("gbp");
 const eurBtn = document.getElementById("eur");
@@ -16,7 +15,7 @@ const getData = async () => {
 
 // function to set price based on currency selected
 const setPrice = (data, cur) => {
-  let num = Number(data.bpi[cur].rate_float).toFixed(2);
+  let num = data.bpi[cur].rate.slice(0,-2);
   price.innerHTML = `${data.bpi[cur].symbol} ${num}`;
 }
 
@@ -45,6 +44,8 @@ setInterval(() => {
       eurBtn.onchange = () => {
         setPrice(data, eur.value);
       };
+
+      console.log(data);
     })
     .catch(err => console.log(err.message));
 }, 500);
