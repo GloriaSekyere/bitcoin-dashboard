@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+  <title>Bitcoin tracking dashboard</title>
+</head>
+<body>
+  <header class="header">
+    <h1>Bitcoin</h1>
+  </header>
+
+  <main class="main">
+    <div class="currencies">
+      <label>
+        <input id="usd" type="radio" name="currency" value="USD" checked>
+        <span>USD</span>
+      </label>
+      <label>
+        <input id="gbp" type="radio" name="currency" value="GBP">
+        <span>GBP</span>
+      </label>
+      <label>
+        <input id="eur" type="radio" name="currency" value="EUR">
+        <span>EUR</span>
+      </label>
+    </div>
+    <div class="price-div">
+      <p class="price"></p>
+    </div>
+    <div class="graph">
+      <img src="./images/graph.png" alt="graph">
+    </div>
+    <div class="about">
+      <p>Disclaimer:</p>
+      <p>This data was produced from the CoinDesk Bitcoin Price Index (USD). Non-USD currency data converted using hourly conversion rate from openexchangerates.org</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p class="conversion">0 <small>BTC</small><br><span>=&dollar;0.00</span></p>
+    <button class="buy">Buy</button>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>

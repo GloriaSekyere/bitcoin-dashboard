@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  background-color: #1f2630;
+}
+
+.header {
+  display: -ms-grid;
+  display: grid;
+  place-content: center center;
+  padding: 20px 0;
+  background-color: #171e26;
+}
+
+.header h1 {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.main .currencies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #1f2630;
+  padding: 15px 0;
+}
+
+.main .currencies [type="radio"] {
+  display: none;
+}
+
+.main .currencies [type="radio"] ~ span {
+  color: #818895;
+  font-size: 18px;
+}
+
+.main .currencies [type="radio"]:checked ~ span {
+  color: #ffffff;
+}
+
+.main .price-div {
+  background-color: #fb425c;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  padding: 15px 0;
+}
+
+.main .price-div p {
+  color: #ffffff;
+  font-size: 50px;
+}
+
+.main .graph {
+  width: 80%;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  margin: 25px auto 10px;
+}
+
+.main .graph img {
+  max-width: 100%;
+  height: auto;
+}
+
+.main .about {
+  padding: 20px;
+}
+
+.main .about p {
+  color: #818895;
+}
+
+.main .about p:first-child {
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1f2630;
+  border-top: 2px solid #29313c;
+}
+
+.footer p {
+  color: #818895;
+}
+
+.footer button {
+  border: none;
+  border-radius: 25px;
+  background-color: #fcd436;
+  color: #171e26;
+  font-weight: 500;
+  font-size: 16px;
+  width: 125px;
+  padding: 15px 0;
+}
+/*# sourceMappingURL=style.css.map */

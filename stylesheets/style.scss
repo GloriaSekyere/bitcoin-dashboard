@@ -1,0 +1,111 @@
+@import "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  background-color: $gray;
+}
+
+.header {
+  display: grid;
+  place-content: center center;
+  padding: 20px 0;
+  background-color: $dark-gray;
+
+  h1 {
+    color: $white;
+    font-weight: 500;
+    font-size: 25px;
+  }
+}
+
+.main {
+  
+  .currencies {
+    display: flex;
+    justify-content: space-around;
+    background-color: $gray;
+    padding: 15px 0;
+
+    [type = "radio"] {
+      display: none;
+    }
+
+    [type = "radio"] ~ span {
+      color: $very-light-gray;
+      font-size: 18px;
+    }
+
+    [type = "radio"]:checked ~ span {
+      color: $white;
+    }
+  }
+
+  .price-div {
+    background-color: $red;
+    display: grid;
+    place-content: center;
+    padding: 15px 0;
+
+    p {
+      color: $white;
+      font-size: 50px;
+    }
+  }
+
+  .graph {
+    width: 80%;
+    display: grid;
+    place-content: center;
+    margin: 25px auto 10px;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .about {
+    padding: 20px;
+    p {
+      color: $very-light-gray;
+      &:first-child {
+        font-size: 20px;
+        color: $white;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $gray;
+  border-top: 2px solid $light-gray;
+
+  p {
+    color: $very-light-gray;
+  }
+  button {
+    border: none;
+    border-radius: 25px;
+    background-color: $yellow;
+    color: $dark-gray;
+    font-weight: 500;
+    font-size: 16px;
+    width: 125px;
+    padding: 15px 0;
+  }
+}
